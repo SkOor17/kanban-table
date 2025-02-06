@@ -23,7 +23,7 @@ export default function ColumnKanban({
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isEditPopupVisible, setIsEditPopupVisible] = useState(false);
-  const [selectedColor, setSelectedColor] = useState(color);
+  const [selectedColor, setSelectedColor] = useState(color);  
 
   const getIndicators = () => {
     return Array.from(
@@ -151,8 +151,12 @@ export default function ColumnKanban({
 
   function handleDelete(): void {
     setDatas((prevDatas) => {
-      return prevDatas.filter((col) => col.id !== id);
+      const res = prevDatas.filter((col) => {
+        return col.id !== id
+      }) 
+      return res;
     });
+    console.log(color);
   }
 
   function handleEdit(): void {

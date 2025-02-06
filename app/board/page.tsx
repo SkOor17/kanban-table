@@ -52,10 +52,10 @@ export default function Page() {
 
   return (
     <div className='p-6 w-screen h-screen min-h-fit flex gap-4'>
-      {datas.map((col, i) => {
+      {datas.map((col) => {
         return (
           <ColumnKanban
-            key={i}
+            key={col.id}
             cards={col.cards}
             color={col.color}
             title={col.title}
