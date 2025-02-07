@@ -4,7 +4,6 @@ import { CardInt, ColInt } from "@/lib/dico";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import Card from "./Card";
 import AddCard from "./AddCard";
-import EditIcon from "./icons/EditIcon";
 import TrashIcon from "./icons/TrashIcon";
 import clsx from "clsx";
 
@@ -195,7 +194,7 @@ export default function ColumnKanban({
           className='w-8 h-8 p-1 rounded-md bg-white flex justify-center items-center border hover:bg-gray-100 cursor-pointer'
           onClick={handleEdit}
         >
-          <EditIcon />
+          🎨
         </div>
         <div
           className='w-8 h-8 p-1 rounded-md bg-white flex justify-center items-center border hover:bg-gray-100 cursor-pointer'
