@@ -109,7 +109,7 @@ export default function ColumnKanban({
         // On cherche la card pour stocker son ancienne colonne et son ancienne place 
         const card = col.cards.find((c) => c.id === +cardId);
         if (card) {
-          currentCard = card;
+          currentCard = { ...card, nbCol: +newColNb };
           currentColIndex = col.id;
           currentIndex = col.cards.findIndex((c) => c.id === card.id);
         }
